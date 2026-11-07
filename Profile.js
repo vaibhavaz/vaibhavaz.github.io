@@ -177,8 +177,8 @@ const achievementAlert = document.querySelector("#achievement-alert");
 const achievementClose = document.querySelector(".achievement-close");
 const developmentAlert = document.querySelector("#development-alert");
 const developmentClose = developmentAlert.querySelector(".achievement-close");
-const achievementSound = new Audio("orb.mp3");
-const clickSound = new Audio("minecraft_click.mp3");
+const achievementSound = new Audio("Assets/orb.mp3");
+const clickSound = new Audio("Assets/minecraft_click.mp3");
 achievementSound.autoplay = true;
 achievementSound.preload = "auto";
 achievementSound.volume = 1;
@@ -191,7 +191,7 @@ const clickContext = clickAudioContext ? new clickAudioContext() : null;
 let clickBuffer;
 
 if (clickContext) {
-    fetch("minecraft_click.mp3")
+    fetch("Assets/minecraft_click.mp3")
         .then(response => response.arrayBuffer())
         .then(data => clickContext.decodeAudioData(data))
         .then(buffer => {
